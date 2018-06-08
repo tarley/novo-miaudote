@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Miaudote</title>
+
+    <link rel="stylesheet" href="plugins/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="app/css/style.css">
+    <link rel="stylesheet" href="plugins/bxslider/css/jquery.bxslider.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+</head>
+
+<body ng-app="miaudote_js">
+    <div ng-include="'/app/pages/inicial/_nav.html'">
+    </div>
+
+    <main>
+        <ng-view></ng-view>
+    </main>
+
+    <div ng-include="'/app/pages/inicial/_footer.html'"></div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/bxslider/js/bxslider/jquery.bxslider.js"></script>
+
+    <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <!-- Meus JS -->
+    <script type="text/javascript" src="app/js/app.js"></script>
+    <script type="text/javascript" src="app/js/controller.js"></script>
+
+    <!--jquery-->
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+
+</body>
+
+</html>

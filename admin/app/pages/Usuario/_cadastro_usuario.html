@@ -1,0 +1,63 @@
+<div class="divisao"></div>
+<div class="box-listagem">
+    <div class="col s12">
+        <div class="col s2">
+
+        </div>
+        <div class="menu-box-listagem">
+            <center><h5><b>Cadastro de Usuários</b> - Informe os dados do Usuário</h5></center>
+        </div>
+        <div class="section-adote col s8">
+            <div class="container">
+
+                <div class="row">
+                    <form ng-submit="CadastrarUsuario()">
+                        <div class='row'>
+                            <div class='larguraCampo input-field col s12'>
+                                <i class="material-icons prefix black-text">account_circle</i>
+                                <input ng-model="nome" id="nome" class='validate' type='text' name='nomeUsuario' />
+                                <label for='email'>Nome do Usuário</label>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='larguraCampo input-field col s12'>
+                                <i class="material-icons prefix black-text">email</i>
+                                <input ng-model="email" id="email" class='validate' type='email' name='email' />
+                                <label for='email'>Entre com o E-mail</label>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='larguraCampo input-field col s12'>
+                                <i class="material-icons prefix black-text">lock</i>
+                                <input ng-model="senha" id="senha" class='validate' type='password' name='senha' />
+                                <label for='password'>Senha</label>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <i class="material-icons prefix black-text">lock</i>
+                                <input ng-model="repetirSenha" id="confirmacaoSenha" class='validate' type='password' name='confirmacaoSenha' />
+                                <label for='password'>Confirme a Senha</label>
+                            </div>
+                        </div>
+
+                        <center>
+                            <div>
+                                <button type='reset' name='btn_reset' class='btn waves-effect waves-light black'>
+                                    Limpar<i class="material-icons right">delete_sweep</i>
+                                </button>
+
+                                <button type='submit' name='btn_login' class='btn waves-effect waves-light black'>
+                                    Salvar<i class="material-icons right">insert_comment</i>
+                                </button>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

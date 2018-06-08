@@ -1,0 +1,25 @@
+<!-- Modal Structure -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <h3 class="header">{{pet.nome}}</h3>
+        <div class="card horizontal">
+            <div class="card-image">
+                <img class="foto" src="{{pet.imagem}}"></img>
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h4>ONG {{pet.ong}}</h4>
+                    <p>
+                        {{getGenero(pet)}}, {{getIdade(pet)}}, {{pet.porte}} porte, {{isCastrado(pet)}}.
+                    </p>
+                    <p>{{pet.descricao}}</p>
+                    <p>{{pet.local}}</p>
+                    <p>{{pet.medicamento}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">ENTENDI</a>
+    </div>
+</div>

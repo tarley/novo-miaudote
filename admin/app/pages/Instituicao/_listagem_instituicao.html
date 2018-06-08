@@ -1,0 +1,41 @@
+<div class="divisao"></div>
+<div ng-include="'app/pages/Instituicao/_ConfirmarExclusao.html'"></div>
+<div class="box-listagem">
+    <div class="menu-box-listagem">
+        <a class="black waves-effect waves-light btn" href="#!/Instituicao/CadastroInstituicao">Adicionar Instituição</a><div  style="display:inline; font-size:8pt; margin-left:10px;">{{TotalRegistros}} Instituições cadastradas</div>
+    </div>
+    <div class="listagem" ng-init="ListarInstituicoes()">
+	<table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+              <th>Tipo</th>
+              <th>Cidade</th>
+              <th></th>
+              <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="x in Instituicoes">
+            <td>{{x.NOM_INSTITUICAO}}</td>
+            <td>{{x.DES_EMAIL}}</td>
+            <td>{{x.NUM_TELEFONE}}</td>
+            <td>{{x.IND_TIPO_INSTITUICAO}}</td>
+            <td>{{x.NOM_CIDADE}}</td>
+            <td><i class="material-icons">edit</i></td>
+            <td><i ng-click="ExcluirInstituicao(x)" class="material-icons">delete</i></td>
+          </tr>
+        </tbody>
+      </table>
+        <center>
+            <div class="row menu-box-listagem" style="font-size:8pt;">
+                <div class="col s3"></div>
+                <div class="col s3"><i ng-show="BtnPaginaAnterior" ng-click="PaginaAnterior()" class="material-icons">navigate_before</i></div>
+                <div class="col s3"><i ng-show="BtnProximaPagina" ng-click="ProximaPagina()" class="material-icons">navigate_next</i></div>
+                <div class="col s3"><div style="float:right; margin-top:5px;">{{PaginaAtual}}/{{QuantidadePaginas}}</div></div>
+            </div>
+        </center>
+    </div>
+</div>

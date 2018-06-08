@@ -1,0 +1,89 @@
+<div class="btn-filtro-mobile">
+    <i class="medium material-icons">filter_list</i>
+</div>
+
+<form ng-submit="filtrar()">
+    <div class="col s12 m2 filtro">
+        <div class="title-filtro">Filtros</div>
+        <div style="margin-top:20px;">
+            <label>Nome:</label>
+            <input type="text" ng-model="filtro.nome" placeholder="Digite o nome do pet">
+        </div>
+        <div>
+            <label>Especie:</label>
+            <p>
+                <input name="group1" type="radio" id="test4" value="Todos" ng-model="filtro.especie" />
+                <label for="test4">Todos</label>
+            </p>
+            <p>
+                <input name="group1" type="radio" id="test2" value="Cão" ng-model="filtro.especie" />
+                <label for="test2">Cão</label>
+            </p>
+            <p>
+                <input name="group1" type="radio" id="test3" value="Gato" ng-model="filtro.especie" />
+                <label for="test3">Gato</label>
+            </p>
+        </div>
+        <div>
+            <div class="input-field col s12">
+                <select id="select-uf" name="uf" ng-model="filtro.uf">
+                    <option value disabled selected>Escolha o estado</option>
+                    <option ng-repeat="o in opcoesUf" value="{{o.value}}"}>{{o.name}}</option>
+                </select>
+                <label>Estado (UF):</label>
+            </div>
+        </div>
+        <div>
+            <div class="input-field col s12">
+                <select id="select-cidade" name="cidade" ng-model="filtro.cidade">
+                    <option value disabled selected>Escolha a cidade</option>
+                    <option ng-repeat="o in opcoesCidade" value="{{o.value}}"}>{{o.name}}</option>
+                </select>
+                <label>Cidade:</label>
+            </div>
+            <div>
+                <label>Porte</label>
+                <p>
+                    <input type="checkbox" id="pequeno" value="pequeno" ng-model="filtro.porteP" />
+                    <label for="pequeno">Pequeno</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="medio" value="médio" ng-model="filtro.porteM" />
+                    <label for="medio">Médio</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="grande" value="grande" ng-model="filtro.porteG" />
+                    <label for="grande">Grande</label>
+                </p>
+            </div>
+            <div>
+                <label>Sexo:</label>
+                <p>
+                    <input name="group2" type="radio" id="test1" value="Todos" ng-model="filtro.genero" />
+                    <label for="test1">Todos</label>
+                </p>
+                <p>
+                    <input name="group2" type="radio" id="test8" value="M" ng-model="filtro.genero" />
+                    <label for="test8">Macho</label>
+                </p>
+                <p>
+                    <input name="group2" type="radio" id="test5" value="F" ng-model="filtro.genero" />
+                    <label for="test5">Fêmea</label>
+                </p>
+            </div>
+            <div>
+                <div class="input-field col s12">
+                    <select id="select-idade" name="idade" ng-model="filtro.idade">
+                        <option value disabled selected>Escolha a idade</option>
+                        <option ng-repeat="o in opcoesIdade" value="{{o.value}}"}>{{o.name}}</option>
+                    </select>
+                    <label>Idade:</label>
+                </div>
+            </div>
+            <div>
+                <button class="btn black" type="submit">Aplicar</button>
+            </div>
+            <div class="divisao"></div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,49 @@
+<div class="section"></div>
+    <center>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        
+        <div class="container">
+            <div id="displayLogin" class="z-depth-1 grey lighten-4 row">
+                <h5>Acesse sua conta:</h5>
+                <form ng-submit="Logar()">
+                    <div class='row'>
+                       <div id="mensagem"></div>
+                        <div class='input-field col s12'>
+                            <i class="material-icons prefix black-text">account_circle</i>
+                            <input required ng-model="email" id="email" class='validate' type='email' name='email' id='email' />
+                            <label for='email'>Enter your email</label>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <i class="material-icons prefix black-text">lock</i>
+                            <input ng-model="senha" required id="senha" class='validate' type='password' name='password' id='password' />
+                            <label for='password'>Enter your password</label>
+                        </div>
+                    </div>
+                   
+                    <center>
+
+                        <div>
+                            <button type='reset' name='btn_reset' class='btn btn-large waves-effect waves-light black'>
+                                Limpar
+                            </button>
+                            <div class="col s1"></div>
+                            <button type='submit' name='btn_login' class='btn btn-large waves-effect waves-light black'>
+                                Login
+                            </button>
+                            <div class="section"></div>
+                            
+                        </div>
+                    </center>
+                </form>
+            </div>
+        </div>
+
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>

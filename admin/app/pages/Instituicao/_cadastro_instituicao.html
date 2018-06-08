@@ -1,0 +1,79 @@
+<div class="divisao"></div>
+<div class="box-listagem" ng-init="LoadDados()">
+    <div class="col s12">
+        <div class="col s2">
+        </div>
+
+        <div id="responsiva" class="container">
+            <div class="menu-box-listagem">
+                <center><h5><b>Cadastro ONG/Protetor</b> - Informe os dados da instituição</h5></center>
+            </div>
+            <div class="section-adote col s8">
+                <div id="responsiva" class="container">
+                    <div class="row">
+                        <form id="formInstituicao" class="col s12" ng-submit="CadastrarInstituicao()">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix black-text">border_color</i>
+                                    <input ng-model="nome" id="first_name" type="text" class="validate">
+                                    <label for="last_name">Nome (Obrigatório)</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix black-text">email</i>
+                                    <input ng-model="email" id="first_name" type="text" class="validate">
+                                    <label for="last_name">E-mail (Obrigatório)</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix black-text">contact_phone</i>
+                                    <input ng-model="telefone" id="first_name" type="text" class="validate phone">
+                                    <label for="last_name">Telefone (Obrigatório)</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <div class="row">
+                                        <div class="input-field col s1">
+                                            <i class="material-icons prefix black-text">book</i>
+                                        </div>
+                                        <div class="input-field col s11">
+                                            <select ng-model="tipo" class="browser-default">
+                                                <option value="" disabled selected>Selecione o tipo</option>
+                                                <option value="O">ONG</option>
+                                                <option value="P">Protetor</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s6">
+                                    <div class="row">
+                                        <div class="input-field col s1">
+                                            <i class="material-icons prefix black-text">book</i>
+                                        </div>
+                                        <div class="input-field col s11">
+                                            <select ng-model="cidade" class="browser-default">
+                                                <option value="" disabled selected>Selecione a cidade</option>
+                                                <option ng-repeat="x in Cidades" value="{{x.COD_CIDADE}}">{{x.NOM_CIDADE}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <center>
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light black" type="reset">
+                                        Limpar<i class="material-icons right">delete_sweep</i>
+                                    </button>
+                                    <div class="col s1"></div>
+                                    <button class="btn waves-effect waves-light black" type="submit">
+                                        Concluir<i class="material-icons right">insert_comment</i>
+                                    </button>
+                                </div>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

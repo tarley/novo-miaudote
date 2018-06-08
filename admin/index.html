@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Miaudote</title>
+        <link rel="stylesheet" href="../plugins/materialize/css/materialize.min.css">
+        <link rel="stylesheet" href="app/css/style.css">
+        <link rel="stylesheet" href="../plugins/bxslider/css/jquery.bxslider.css">
+        <link rel="stylesheet" href="../plugins/jqgrid/jquery-ui.min.css">
+        <link type="text/css" rel="stylesheet" href="../plugins/jsgrid/jsgrid.min.css" />
+        <link type="text/css" rel="stylesheet" href="../plugins/jsgrid/jsgrid-theme.min.css" />
+        <link href="../plugins/toast/build/toastr.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+
+    </head>
+
+    <body ng-app="miaudote_admin">
+        <div ng-controller="MenuController" id="menu_admin" style="display:none; float:left" ng-include="'app/pages/Home/_menu.html'"></div>
+        <main>
+            <ng-view></ng-view>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../plugins/bxslider/js/bxslider/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="../plugins/materialize/js/materialize.min.js"></script>
+
+        <!-- Angular JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="../plugins/toast/toastr.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+        <!-- Controllers -->
+        <script type="text/javascript" src="app/js/app.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/LoginController.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/AdminController.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/UsuarioController.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/AnimalController.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/InstituicaoController.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/MinhaContaController.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/MenuController.js"></script>
+        <script type="text/javascript" src="app/js/Controllers/LogoutController.js"></script>
+
+        <!-- Services -->
+        <script type="text/javascript" src="app/js/Services/AdminService.js"></script>
+    </body>
+</html>
