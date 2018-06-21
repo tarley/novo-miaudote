@@ -2,6 +2,7 @@
 <div class="box-listagem">
     <div class="col s12">
         <div class="col s2">
+            <div ng-include="'/app/pages/gerencial/_menu.html'"></div>
         </div>
 
         <div id="responsiva" class="container">
@@ -14,7 +15,7 @@
                             <form ng-submit="CadastrarAnimal()" id="formAnimal" class="col s12" method="post">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input required ng-model="nome" id="nome_pet" name="nome" type="text" class="validate" />
+                                        <input required ng-model="animal.nome" id="nome_pet" name="nome" type="text" class="validate" />
                                         <label for="last_name">Nome (Obrigatório)</label>
                                     </div>
                                     <div class="input-field col s12">
@@ -23,7 +24,7 @@
                                                 <div class="btn black input-field col m2 right">
                                                     <center>
                                                         <span>Foto</span>
-                                                        <input type="file" accept="image/*" file-model = "myFile">
+                                                        <input type="file" accept="image/*" file-input="animal.file">
                                                     </center>
                                                 </div>
                                                 <div class="col m0.5"></div>
@@ -39,11 +40,11 @@
                                         <div class="row">
                                             <div class="col m1.5"><span>Sexo:</span></div>
                                             <div class="col m5.25">
-                                                <input width="200" required ng-model="sexo" name="sexo" value="macho" type="radio" id="test1" class="validate" />
+                                                <input width="200" required ng-model="animal.sexo" name="sexo" value="macho" type="radio" id="test1" class="validate" />
                                                 <label for="test1">Macho</label>
                                             </div>
                                             <div class="col m5.25">
-                                                <input required ng-model="sexo" name="sexo" value="femea" type="radio" id="test2" class="validate" />
+                                                <input required ng-model="animal.sexo" name="sexo" value="femea" type="radio" id="test2" class="validate" />
                                                 <label for="test2">Fêmea</label>
                                             </div>
                                         </div>
@@ -52,11 +53,11 @@
                                         <div class="row">
                                             <div class="col m1.5"><span>Especie:</span></div>
                                             <div class="col m2.5">
-                                                <input required ng-model="especie" name="especie" value="1" type="radio" id="test3" class="validate" />
+                                                <input required ng-model="animal.especie" name="especie" value="1" type="radio" id="test3" class="validate" />
                                                 <label for="test3">Cão</label>
                                             </div>
                                             <div class="col m2.5">
-                                                <input required ng-model="especie" name="especie" value="2" type="radio" id="test4" class="validate" />
+                                                <input required ng-model="animal.especie" name="especie" value="2" type="radio" id="test4" class="validate" />
                                                 <label for="test4">Gato</label>
                                             </div>
                                         </div>
@@ -66,11 +67,11 @@
                                         <div class="row">
                                             <div class="col s1.5"><span>Castrado:</span></div>
                                             <div class="col s2.5">
-                                                <input required ng-model="castrado" name="castrado" value="s" type="radio" id="test5" class="validate" />
+                                                <input required ng-model="animal.castrado" name="castrado" value="s" type="radio" id="test5" class="validate" />
                                                 <label for="test5">Sim</label>
                                             </div>
                                             <div class="col m2.5">
-                                                <input required ng-model="castrado" name="castrado" value="n" type="radio" id="test6" class="validate" />
+                                                <input required ng-model="animal.castrado" name="castrado" value="n" type="radio" id="test6" class="validate" />
                                                 <label for="test6">Não</label>
                                             </div>
                                         </div>
@@ -83,7 +84,7 @@
                                             </div>
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
-                                                <select class="browser-default" name="idade" ng-model="idade">
+                                                <select class="browser-default" name="idade" ng-model="animal.idade">
                                                 <option value="">Informe a idade do Pet</option>
                                                 <option value="1">Até 1 ano (Filhote)</option>
                                                 <option value="2">1 a 8 anos (Adulto)</option>
@@ -100,7 +101,7 @@
                                             </div>
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
-                                                <select ng-model="porte" class="browser-default" name="porte">
+                                                <select ng-model="animal.porte" class="browser-default" name="porte">
                                                 <option value="">Informe o porte do pet</option>
                                                 <option value="1">Pequeno</option>
                                                 <option value="2">Médio</option>
@@ -117,7 +118,7 @@
                                             </div>
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
-                                                <select ng-model="instituicao" class="browser-default" name="instituicao">
+                                                <select ng-model="animal.instituicao" class="browser-default" name="instituicao">
                                                 <option value="">Informe a Instituição</option>
                                                 <option value="1">ONG Proteger</option>
                                                 <option value="2">João Junior</option>
@@ -133,7 +134,7 @@
                                             </div>
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
-                                                <select id="vacina_pet" class="browser-default" name="vacinas" ng-model="vacinas">
+                                                <select id="vacina_pet" class="browser-default" name="vacinas" ng-model="animal.vacinas">
                                                 <option value="">Vacinas e vermífugos</option>
                                                 <option value="1"></option>
                                                 <option value="2"></option>
@@ -149,7 +150,7 @@
                                             </div>
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
-                                                <select id="temperamento_pet" class="browser-default" name="temperamento" ng-model="temperamento">
+                                                <select id="temperamento_pet" class="browser-default" name="temperamento" ng-model="animal.temperamento">
                                                 <option value="">Informe o temperamento do Pet</option>
                                                 <option value="1">Dócil</option>
                                                 <option value="2">Amigável</option>
@@ -159,10 +160,9 @@
                                         </div>
                                     </div>
 
-
                                     <div class="input-field col m12">
                                         <i class="material-icons prefix black-text">border_color</i>
-                                        <input required ng-model="observacao" id="obs_pet" name="observacao" type="text" class="validate">
+                                        <input required ng-model="animal.observacao" id="obs_pet" name="observacao" type="text" class="validate">
                                         <label for="last_name">Observações</label>
                                     </div>
                                 </div>
@@ -170,20 +170,19 @@
                                 <center>
                                     <div class="div-botoes col m12">
                                         <button class="btn waves-effect waves-light black" type="reset">
-                                        Limpar<i class="material-icons right">delete_sweep</i>
-                                    </button>
-                                        <div class="col m1"></div>
-
-                                        <button type="submit" name="btn_salvar" class="btn waves-effect waves-light black">
-                                    Concluir<i class="material-icons right">insert_comment</i>
-                                </button>
+                                            Limpar<i class="material-icons right">delete_sweep</i>
+                                        </button>
+                                    <div class="col m1"></div>
+                                        <button id="Salvar" class="btn waves-effect waves-light black" type="submit" name="btn_salvar">
+                                            Concluir<i class="material-icons right">insert_comment</i>
+                                        </button>
                                     </div>
                                 </center>
                             </form>
                         </div>
                     </div>
                 </div>
-				<br>
+			<br>
         </div>
     </div>
 </div>
