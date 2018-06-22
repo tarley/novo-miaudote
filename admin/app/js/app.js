@@ -54,7 +54,26 @@ app.config(function ($routeProvider) {
                 redirectTo: '/home'
             });
 
-});
+})
+    .directive('fileInput', function() {
+        return {
+            restrict: 'A',
+            scope: {
+                fileInput: "="
+            },
+            link: function(scope, element) {
+                element.bind("change", function(changeEvent) {
+                    var reader = new FileReader();
+                    reader.onload = function(loadEvent) {
+                        scope.$apply(function() {
+                            scope.fileInput = loadEvent.target.result;
+                        });
+                    };
+                    reader.readAsDataURL(changeEvent.target.files[0]);
+                });
+            }
+        };
+    });  
 
 app.run(function ($location, $rootScope) {
     //Rotas que necessitam do login
@@ -100,4 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems, options);
   });
+  
+
+
   

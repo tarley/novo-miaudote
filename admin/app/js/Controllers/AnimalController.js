@@ -2,24 +2,27 @@
       'use strict';
       angular.module('miaudote.controller')
 
-          .controller('AnimalController', function CadAnimalController($scope) {
-              $scope.CadastrarAnimal = function() {
-                  $.ajax({
-                      type: "POST",
+          .controller('AnimalController', function CadAnimalController($scope, $http, $location, Toast) {
+              
+               $scope.CadastrarAnimal = function() {
+                  $http({
+                      method: 'POST',
                       url: "../api/Animal.php?acao=CadastrarAnimal",
-                      data: $scope.animal,
-                      success: function(e) {
-                          if (e.sucesso) {
-                              $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">" + e.mensagem + "</div>");
-                              document.getElementById("Salvar").innerHTML = "Cadastrados com sucesso!";
-                              window.location = "/#!/Animal";
-                          }
-                          else {
-                              $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">" + e.mensagem + "</div>");
-                          }
+                      data: {'dados': $scope.animal}
+                      }).then(function successCallback(response) {
+                      if (response.data.sucesso) {
+                          Toast.ShowMessage("success", response.data.mensagem);
+                          $location.path("/Animal");
                       }
+                      else {
+                          Toast.ShowMessage("warning", response.data.mensagem);
+                      }
+                  }, function errorCallback(response) {
+                      Toast.ShowMessage("error", response);
                   });
               }
+
           });
 
   })();
+  
