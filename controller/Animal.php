@@ -5,7 +5,7 @@ header("Content-type: application/json");
 
 class Animal {
 
-    public function cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Vacina, $p_Temperamento, $p_Instituicao, $p_Especie, $p_IndCastrado ) {
+    public function cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Vacina, $p_Temperamento, $p_Instituicao, $p_Especie, $p_IndCastrado, $p_foto ) {
        require_once "Conexao.php";
        
        $Animal = new Animal();
@@ -68,6 +68,10 @@ class Animal {
         
             return array("mensagem" => SUCESSO_ANIMAL_CRIADO,
                         "sucesso" => true);
+                        
+        $id = BuscarId($p_NomeAnimal, $p_Sexo, $p_Especie, $p_IndCastrado, $p_DesObservacao);
+        
+        UploadImagem($id, $p_foto);
         
         } catch(PDOException $e){
                    
@@ -438,21 +442,41 @@ class Animal {
     }
     
     public function UploadImagem($id, $imagem) {
-        $tipo = pathinfo($imagem);
-        $conteudo = file_get_contents($imagem['tmp_name']);
+        require_once "Conexao.php";
         
-        $stmt=$conn -> prepare("INSERT INTO `FOTO`(`NOM_FOTO`, `TIP_FOTO`, `BIN_FOTO`, `IND_FOTO_PRINCIPAL`, `ANIMAL_COD_ANIMAL`) 
-                                VALUES (:nome, :tipo, :binario, 'T', :id)");
+        $tipo = pathinfo($imagem, PATHINFO_EXTENSION);
         
-        $stmt->bindParam(':nome', $nome);
+        $stmt = $conn -> prepare("INSERT INTO `FOTO`(`TIP_FOTO`, `BIN_FOTO`, `IND_FOTO_PRINCIPAL`, `ANIMAL_COD_ANIMAL`) 
+                                VALUES (:tipo, :binario, 'T', :id)");
+        
         $stmt->bindParam(':tipo', $tipo);
-        $stmt->bindParam(':binario', $conteudo);
+        $stmt->bindParam(':binario', $imagem);
         $stmt->bindParam(':id', $id);
         
         $stmt->execute();
         
         $conn = null;
     
+    }
+    
+    public function BuscarId ($nome, $sexo, $especie, $castrado, $observacao) {
+        require_once "Conexao.php";
+        
+        $stmt = $conn -> prepare("SELECT COD_ANIMAL FROM ANIMAL 
+                            WHERE NOM_ANIMAL = :nome AND IND_SEXO_ANIMAL = :sexo AND IND_CASTRADO = :castrado AND DES_OBSERVACAO = :observacao");
+                            
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':sexo', $sexo);
+        $stmt->bindParam(':castrado', $castrado);
+        $stmt->bindParam(':observacao', $observacao);
+        
+        $stmt->execute();
+        
+        $id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        return $id;
+        
+        $conn = null;
     }
     
     

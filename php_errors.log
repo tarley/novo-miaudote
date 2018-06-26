@@ -875,3 +875,40 @@ Stack trace:
 #1 /home/ubuntu/workspace/api/Auth.php(12): Auth->CriarSessao('nixonsette@gmai...', '123')
 #2 {main}
   thrown in /home/ubuntu/workspace/controller/Auth.php on line 12
+[25-Jun-2018 20:37:53 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 259
+[25-Jun-2018 20:37:53 UTC] PHP Stack trace:
+[25-Jun-2018 20:37:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[25-Jun-2018 20:37:53 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:104
+[26-Jun-2018 00:23:35 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 78
+[26-Jun-2018 00:23:35 UTC] PHP Stack trace:
+[26-Jun-2018 00:23:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 00:24:09 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 78
+[26-Jun-2018 00:24:09 UTC] PHP Stack trace:
+[26-Jun-2018 00:24:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 00:26:22 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 78
+[26-Jun-2018 00:26:22 UTC] PHP Stack trace:
+[26-Jun-2018 00:26:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 00:26:37 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 78
+[26-Jun-2018 00:26:37 UTC] PHP Stack trace:
+[26-Jun-2018 00:26:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 00:26:43 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 78
+[26-Jun-2018 00:26:43 UTC] PHP Stack trace:
+[26-Jun-2018 00:26:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 00:27:37 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 78
+[26-Jun-2018 00:27:37 UTC] PHP Stack trace:
+[26-Jun-2018 00:27:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 00:29:00 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 79
+[26-Jun-2018 00:29:00 UTC] PHP Stack trace:
+[26-Jun-2018 00:29:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 00:29:04 UTC] PHP Fatal error:  Call to undefined method stdClass::cadastrarAnimal() in /home/ubuntu/workspace/api/Animal.php on line 79
+[26-Jun-2018 00:29:04 UTC] PHP Stack trace:
+[26-Jun-2018 00:29:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 20:19:10 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/ubuntu/workspace/api/Animal.php on line 11
+[26-Jun-2018 20:19:10 UTC] PHP Stack trace:
+[26-Jun-2018 20:19:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 20:20:19 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/ubuntu/workspace/api/Animal.php on line 11
+[26-Jun-2018 20:20:19 UTC] PHP Stack trace:
+[26-Jun-2018 20:20:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 20:20:29 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/ubuntu/workspace/api/Animal.php on line 11
+[26-Jun-2018 20:20:29 UTC] PHP Stack trace:
+[26-Jun-2018 20:20:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
