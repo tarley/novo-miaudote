@@ -66,12 +66,12 @@ class Animal {
         
         $stmt->execute();
         
+        $id = $this->BuscarId($p_NomeAnimal, $p_Sexo, $p_Especie, $p_IndCastrado, $p_DesObservacao);
+        
+        $this->UploadImagem($id, $p_foto);
+        
             return array("mensagem" => SUCESSO_ANIMAL_CRIADO,
                         "sucesso" => true);
-                        
-        $id = BuscarId($p_NomeAnimal, $p_Sexo, $p_Especie, $p_IndCastrado, $p_DesObservacao);
-        
-        UploadImagem($id, $p_foto);
         
         } catch(PDOException $e){
                    
@@ -446,6 +446,12 @@ class Animal {
         
         $tipo = pathinfo($imagem, PATHINFO_EXTENSION);
         
+        echo $id;
+        echo $tipo;
+        echo $imagem;
+        
+        
+        try {
         $stmt = $conn -> prepare("INSERT INTO `FOTO`(`TIP_FOTO`, `BIN_FOTO`, `IND_FOTO_PRINCIPAL`, `ANIMAL_COD_ANIMAL`) 
                                 VALUES (:tipo, :binario, 'T', :id)");
         
@@ -454,27 +460,37 @@ class Animal {
         $stmt->bindParam(':id', $id);
         
         $stmt->execute();
-        
+        } catch(PDOException $e){
+                   
+                        return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error.$e->getMessage(),
+                          "sucesso" => false);
+                          
+        }
+       
         $conn = null;
     
     }
     
     public function BuscarId ($nome, $sexo, $especie, $castrado, $observacao) {
-        require_once "Conexao.php";
-        
-        $stmt = $conn -> prepare("SELECT COD_ANIMAL FROM ANIMAL 
-                            WHERE NOM_ANIMAL = :nome AND IND_SEXO_ANIMAL = :sexo AND IND_CASTRADO = :castrado AND DES_OBSERVACAO = :observacao");
-                            
-        $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':sexo', $sexo);
-        $stmt->bindParam(':castrado', $castrado);
-        $stmt->bindParam(':observacao', $observacao);
-        
+        include "Conexao.php";
+                
+        try {
+        $stmt = $conn->prepare("SELECT MAX(COD_ANIMAL) MAXIMO FROM ANIMAL");
+
         $stmt->execute();
         
         $id = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
+        $id = $id[0]["MAXIMO"];
+        
         return $id;
+        
+        } catch(PDOException $e){
+                   
+                return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error.$e->getMessage(),
+                "sucesso" => false);
+                          
+        }
         
         $conn = null;
     }

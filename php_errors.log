@@ -912,3 +912,186 @@ Stack trace:
 [26-Jun-2018 20:20:29 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/ubuntu/workspace/api/Animal.php on line 11
 [26-Jun-2018 20:20:29 UTC] PHP Stack trace:
 [26-Jun-2018 20:20:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:42:56 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 465
+[26-Jun-2018 22:42:56 UTC] PHP Stack trace:
+[26-Jun-2018 22:42:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:42:56 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:42:56 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:45:29 UTC] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting function (T_FUNCTION) in /home/ubuntu/workspace/controller/Animal.php on line 466
+[26-Jun-2018 22:45:29 UTC] PHP Stack trace:
+[26-Jun-2018 22:45:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:46:19 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 472
+[26-Jun-2018 22:46:19 UTC] PHP Stack trace:
+[26-Jun-2018 22:46:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:46:19 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:46:19 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:46:23 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 472
+[26-Jun-2018 22:46:23 UTC] PHP Stack trace:
+[26-Jun-2018 22:46:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:46:23 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:46:23 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:47:30 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 473
+[26-Jun-2018 22:47:30 UTC] PHP Stack trace:
+[26-Jun-2018 22:47:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:47:30 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:47:30 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:50:27 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 478
+[26-Jun-2018 22:50:27 UTC] PHP Stack trace:
+[26-Jun-2018 22:50:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:50:27 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:50:27 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:54:27 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 478
+[26-Jun-2018 22:54:27 UTC] PHP Stack trace:
+[26-Jun-2018 22:54:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:54:27 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:54:27 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:55:55 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 478
+[26-Jun-2018 22:55:55 UTC] PHP Stack trace:
+[26-Jun-2018 22:55:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:55:55 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:55:55 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:56:48 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 479
+[26-Jun-2018 22:56:48 UTC] PHP Stack trace:
+[26-Jun-2018 22:56:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:56:48 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:56:48 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 22:57:40 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 22:57:40 UTC] PHP Stack trace:
+[26-Jun-2018 22:57:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:57:40 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:57:40 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 22:57:47 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 22:57:47 UTC] PHP Stack trace:
+[26-Jun-2018 22:57:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 22:57:47 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 22:57:47 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:01:07 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 474
+[26-Jun-2018 23:01:07 UTC] PHP Stack trace:
+[26-Jun-2018 23:01:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:01:07 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:01:07 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 23:01:28 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 474
+[26-Jun-2018 23:01:28 UTC] PHP Stack trace:
+[26-Jun-2018 23:01:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:01:28 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:01:28 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 23:01:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 474
+[26-Jun-2018 23:01:35 UTC] PHP Stack trace:
+[26-Jun-2018 23:01:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:01:35 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:01:35 UTC] PHP   3. Animal->BuscarId() /home/ubuntu/workspace/controller/Animal.php:69
+[26-Jun-2018 23:01:54 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:01:54 UTC] PHP Stack trace:
+[26-Jun-2018 23:01:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:01:54 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:01:54 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:02:52 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:02:52 UTC] PHP Stack trace:
+[26-Jun-2018 23:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:02:52 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:02:52 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:03:23 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:03:23 UTC] PHP Stack trace:
+[26-Jun-2018 23:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:03:23 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:03:23 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:04:52 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:04:52 UTC] PHP Stack trace:
+[26-Jun-2018 23:04:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:04:52 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:04:52 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:06:56 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:06:56 UTC] PHP Stack trace:
+[26-Jun-2018 23:06:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:06:56 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:06:56 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:07:46 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:07:46 UTC] PHP Stack trace:
+[26-Jun-2018 23:07:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:07:46 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:07:46 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:07:49 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:07:49 UTC] PHP Stack trace:
+[26-Jun-2018 23:07:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:07:49 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:07:49 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:08:21 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:08:21 UTC] PHP Stack trace:
+[26-Jun-2018 23:08:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:08:21 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:08:21 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:08:24 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:08:24 UTC] PHP Stack trace:
+[26-Jun-2018 23:08:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:08:24 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:08:24 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:09:12 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:09:12 UTC] PHP Stack trace:
+[26-Jun-2018 23:09:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:09:12 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:09:12 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:09:17 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:09:17 UTC] PHP Stack trace:
+[26-Jun-2018 23:09:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:09:17 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:09:17 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:09:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:09:35 UTC] PHP Stack trace:
+[26-Jun-2018 23:09:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:09:35 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:09:35 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:09:42 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:09:42 UTC] PHP Stack trace:
+[26-Jun-2018 23:09:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:09:42 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:09:42 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:10:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:10:08 UTC] PHP Stack trace:
+[26-Jun-2018 23:10:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:10:08 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:10:08 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:10:10 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:10:10 UTC] PHP Stack trace:
+[26-Jun-2018 23:10:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:10:10 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:10:10 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:10:37 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:10:37 UTC] PHP Stack trace:
+[26-Jun-2018 23:10:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:10:37 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:10:37 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:10:52 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:10:52 UTC] PHP Stack trace:
+[26-Jun-2018 23:10:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:10:52 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:10:52 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:11:13 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:11:13 UTC] PHP Stack trace:
+[26-Jun-2018 23:11:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:11:13 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:11:13 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:11:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:11:35 UTC] PHP Stack trace:
+[26-Jun-2018 23:11:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:11:35 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:11:35 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:12:13 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:12:13 UTC] PHP Stack trace:
+[26-Jun-2018 23:12:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:12:13 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:12:13 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:12:24 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 450
+[26-Jun-2018 23:12:24 UTC] PHP Stack trace:
+[26-Jun-2018 23:12:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:12:24 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:12:24 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:13:27 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 453
+[26-Jun-2018 23:13:27 UTC] PHP Stack trace:
+[26-Jun-2018 23:13:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:13:27 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:13:27 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[26-Jun-2018 23:15:25 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 455
+[26-Jun-2018 23:15:25 UTC] PHP Stack trace:
+[26-Jun-2018 23:15:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[26-Jun-2018 23:15:25 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[26-Jun-2018 23:15:25 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
