@@ -41,7 +41,7 @@ if($acao == "CadastrarAnimal") {
     }
 
     //Tratando campo Sexo
-    if($dados-sexo == 'macho') {
+    if($dados->sexo == 'macho') {
         $p_Sexo = 'M';
     }
     elseif($dados->sexo == 'femea') {
@@ -49,13 +49,14 @@ if($acao == "CadastrarAnimal") {
     }
 
     
+    $p_Instituicao = $dados->instituicao;
     //Tratando campo Instituição
-    if($dados->instituicao == '1') {
-        $p_Instituicao = '1';
-    }
-    elseif($dados->instituicao == '2') {
-        $p_Instituicao = '2';
-    }
+    // if($dados->instituicao == '1') {
+    //     $p_Instituicao = '1';
+    // }
+    // elseif($dados->instituicao == '2') {
+    //     $p_Instituicao = '2';
+    // }
 
     //Tratando campo Castrado
     if($dados->castrado == 's') {

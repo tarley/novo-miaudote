@@ -442,18 +442,19 @@ class Animal {
     }
     
     public function UploadImagem($id, $imagem) {
-        require_once "Conexao.php";
+        include "Conexao.php";
         
-        $tipo = pathinfo($imagem, PATHINFO_EXTENSION);
-        
-        echo $id;
-        echo $tipo;
-        echo $imagem;
         
         
         try {
         $stmt = $conn -> prepare("INSERT INTO `FOTO`(`TIP_FOTO`, `BIN_FOTO`, `IND_FOTO_PRINCIPAL`, `ANIMAL_COD_ANIMAL`) 
                                 VALUES (:tipo, :binario, 'T', :id)");
+                                
+        //Pega extensão arquivo
+        $tipo = substr($imagem, 11, 3);
+        if($tipo = 'jpe') {
+            $tipo = substr($imagem, 11, 4);    
+        } 
         
         $stmt->bindParam(':tipo', $tipo);
         $stmt->bindParam(':binario', $imagem);

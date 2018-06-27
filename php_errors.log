@@ -1095,3 +1095,8 @@ Stack trace:
 [26-Jun-2018 23:15:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
 [26-Jun-2018 23:15:25 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
 [26-Jun-2018 23:15:25 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[27-Jun-2018 19:19:16 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 455
+[27-Jun-2018 19:19:16 UTC] PHP Stack trace:
+[27-Jun-2018 19:19:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[27-Jun-2018 19:19:16 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
+[27-Jun-2018 19:19:16 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
