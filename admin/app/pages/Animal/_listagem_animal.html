@@ -7,28 +7,28 @@
 		<table>
         <thead>
           <tr>
-              <th></th>
-              <th>Name</th>
+              <th>Foto</th>
+              <th>Nome</th>
               <th>Idade</th>
               <th>Sexo</th>
               <th>Porte</th>
               <th>Temperamento</th>
+              <th>Instituição</th>
               <th>Adotado?</th>
               <th></th>
               <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="x in Animais">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-			 Não
-			</td>
+          <tr ng-repeat="x in Animal">
+            <td> <img src="{{x.BIN_FOTO}}"/></td>
+            <td>{{x.NOM_ANIMAL}}</td>
+            <td>{{x.IND_IDADE}}</td>
+            <td>{{x.IND_SEXO_ANIMAL}}</td>
+            <td>{{x.IND_PORTE_ANIMAL}}</td>
+            <td>{{x.DES_TEMPERAMENTO}}</td>
+            <td>{{x.NOM_INSTITUICAO}}</td>
+            <td>Teste</td>
             <td><i class="material-icons">edit</i></td>
             <td><i class="material-icons">delete</i></td>
           </tr>

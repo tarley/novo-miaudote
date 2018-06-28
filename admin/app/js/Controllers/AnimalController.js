@@ -26,7 +26,7 @@
                   Menu.LoadMenu();
                   $http({
                       method: 'GET',
-                      url: '../api/Animal.php?acao=BuscarTodos='
+                      url: '../api/Animal.php?acao=BuscarTodos&retornarImagem=T'
                   }).then(function successCallback(response) {
                       var e = response.data;
                       if (e.sucesso) {

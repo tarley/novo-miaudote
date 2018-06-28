@@ -246,8 +246,8 @@ class Animal {
                 $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
                 foreach($lista as $key => $value) {
-                    $lista[$key]['BIN_FOTO'] = "data:image/" . $value['TIP_FOTO'] . 
-                        ";base64, " . base64_encode($value['BIN_FOTO']);
+                    $lista[$key]['BIN_FOTO'] = "data:image/" . $value['TIP_FOTO']
+                         .$value['BIN_FOTO'];
                 }
                 
                 if(empty($lista)){
