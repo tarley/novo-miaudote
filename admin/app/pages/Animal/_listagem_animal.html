@@ -1,7 +1,7 @@
 <div class="divisao"></div>
 <div class="box-listagem">
 	<div class="menu-box-listagem">
-		<a class="black waves-effect waves-light btn" href="#!/Animal/CadastroAnimal">Adicionar Animal</a>
+		<a class="black waves-effect waves-light btn" href="#!/Animal/CadastroAnimal">Adicionar Animal</a><div  style="display:inline; font-size:8pt; margin-left:10px;">{{TotalRegistros}} Animais cadastrados</div>
 	</div>
 	<div class="listagem" ng-init="ListarAnimais()">
 		<table>
@@ -19,13 +19,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><div style="background-image:url('http://pontodocao.com/wp-content/uploads/2015/05/filhotes-de-pinscher-miniatura-curitiba-pr-brasil__6EDAB1_1.jpg');" class="img-listagem"></div></td>
+          <tr ng-repeat="x in Animais">
             <td></td>
-            <td>25</td>
-            <td>Feminino</td>
-            <td>Pequeno</td>
-            <td>Raivoso</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>
 			 Não
 			</td>

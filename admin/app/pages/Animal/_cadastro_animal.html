@@ -1,5 +1,5 @@
 <div class="divisao"></div>
-<div class="box-listagem">
+<div class="box-listagem" ng-init="LoadDados()">
     <div class="col s12">
         <div class="col s2">
             <div ng-include="'/app/pages/gerencial/_menu.html'"></div>
@@ -85,7 +85,7 @@
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
                                                 <select class="browser-default" name="idade" ng-model="animal.idade">
-                                                <option value="">Informe a idade do Pet</option>
+                                                <option value="" disabled selected>Informe a idade do Pet</option>
                                                 <option value="1">Até 1 ano (Filhote)</option>
                                                 <option value="2">1 a 8 anos (Adulto)</option>
                                                 <option value="3">Acima de 8 anos (Idoso)</option>
@@ -102,7 +102,7 @@
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
                                                 <select ng-model="animal.porte" class="browser-default" name="porte">
-                                                <option value="">Informe o porte do pet</option>
+                                                <option value="" disabled selected>Informe o porte do pet</option>
                                                 <option value="1">Pequeno</option>
                                                 <option value="2">Médio</option>
                                                 <option value="3">Grande</option>
@@ -119,7 +119,7 @@
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
                                                 <select ng-model="animal.instituicao" class="browser-default" name="instituicao">
-                                                <option value="">Informe a Instituição</option>
+                                                <option value="" disabled selected>Informe a Instituição</option>
                                                 <option value="1">ONG Proteger</option>
                                                 <option value="2">João Junior</option>
                                             </select>
@@ -135,10 +135,10 @@
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
                                                 <select id="vacina_pet" class="browser-default" name="vacinas" ng-model="animal.vacinas">
-                                                <option value="">Vacinas e vermífugos</option>
-                                                <option value="1"></option>
-                                                <option value="2"></option>
-                                                <option value="3"></option>
+                                                <option value="" disabled selected>Vacinas e vermífugos</option>
+                                                <option value="1">Dontral</option>
+                                                <option value="2">Canex</option>
+                                                <option value="3">Virbac</option>
                                             </select>
                                             </div>
                                         </div>
@@ -151,7 +151,7 @@
                                             <div class="col m0.5"></div>
                                             <div class="input-field col m10.5">
                                                 <select id="temperamento_pet" class="browser-default" name="temperamento" ng-model="animal.temperamento">
-                                                <option value="">Informe o temperamento do Pet</option>
+                                                <option value="" disabled selected>Informe o temperamento do Pet</option>
                                                 <option value="1">Dócil</option>
                                                 <option value="2">Amigável</option>
                                                 <option value="3">Agressivo</option>
@@ -162,7 +162,7 @@
 
                                     <div class="input-field col m12">
                                         <i class="material-icons prefix black-text">border_color</i>
-                                        <input required ng-model="animal.observacao" id="obs_pet" name="observacao" type="text" class="validate">
+                                        <input required ng-model="animal.observacao" id="obs_pet" name="observacao" type="text">
                                         <label for="last_name">Observações</label>
                                     </div>
                                 </div>
