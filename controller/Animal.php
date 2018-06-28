@@ -452,7 +452,7 @@ class Animal {
                                 
         //Pega extensão arquivo
         $tipo = substr($imagem, 11, 3);
-        if($tipo = 'jpe') {
+        if($tipo == "jpe") {
             $tipo = substr($imagem, 11, 4);    
         } 
         
