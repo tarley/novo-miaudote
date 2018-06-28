@@ -25,7 +25,7 @@ var app = angular.module('miaudote.controller', [])
 
             $.ajax({
                 type: "GET",
-                url: "api/Animal.php?acao=BuscarTodos",
+                url: "api/Animal.php?acao=BuscarTodos&retornarImagem=T",
                 success: function(e) {
                     $scope.listaPets = e.data;
                 }
@@ -42,12 +42,12 @@ var app = angular.module('miaudote.controller', [])
             { name: 'Acima de 8 anos (Idoso)', value: 'Idoso' }
         ];
 
-        $scope.opcoesUf = [
-            { name: 'Todos', value: 'Todos' },
-            { name: 'MG', value: 'MG' },
-            { name: 'SP', value: 'SP' },
-            { name: 'RJ', value: 'RJ' }
-        ];
+        // $scope.opcoesUf = [
+        //     { name: 'Todos', value: 'Todos' },
+        //     { name: 'MG', value: 'MG' },
+        //     { name: 'SP', value: 'SP' },
+        //     { name: 'RJ', value: 'RJ' }
+        // ];
 
         $scope.opcoesCidade = [
             { name: 'Todas', value: 'Todas' },
