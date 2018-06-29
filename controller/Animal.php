@@ -502,6 +502,60 @@ class Animal {
         $conn = null;
     }
     
+    public function filtro($nome, $especie, $porte, $sexo, $idade) {
+        require_once "Conexao.php";
+        
+        try {
+                $stmt = $conn->prepare("SELECT A.COD_ANIMAL, A.NOM_ANIMAL, A.IND_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                A.DES_OBSERVACAO, A.DES_VACINA, A.DES_TEMPERAMENTO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.NOM_FOTO, F.IND_FOTO_PRINCIPAL, F.TIP_FOTO, F.BIN_FOTO
+                FROM ANIMAL A
+				INNER JOIN FOTO F ON (A.COD_ANIMAL = F.ANIMAL_COD_ANIMAL)
+                INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
+                INNER JOIN ESPECIE E ON (E.COD_ESPECIE = A.ESPECIE_COD_ESPECIE)
+                INNER JOIN CIDADE C ON (I.CIDADE_COD_CIDADE = C.COD_CIDADE)
+                INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
+                WHERE A.IND_ADOTADO = 'F'
+                AND A.IND_EXCLUIDO = 'F'
+                AND F.IND_FOTO_PRINCIPAL = 'T'
+                AND A.NOM_ANIMAL LIKE '%:nome%'
+                AND A.ESPECIE_COD_ESPECIE IN (:especie)
+                AND A.IND_PORTE_ANIMAL IN (:porte)
+                AND A.IND_SEXO_ANIMAL IN (:sexo)
+                AND A.IND_IDADE IN (:idade)
+                ORDER BY A.COD_ANIMAL");
+                
+                $stmt->bindParam(':nome', $nome);
+                $stmt->bindParam(':especie', $especie);
+                $stmt->bindParam(':porte', $porte);
+                $stmt->bindParam(':sexo', $sexo);
+                $stmt->bindParam(':idade', $idade);
+                
+                $stmt->execute();
+                
+                $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+                foreach($lista as $key => $value) {
+                    $lista[$key]['BIN_FOTO'] = "data:image/" . $value['TIP_FOTO']
+                         .$value['BIN_FOTO'];
+                }
+                
+                if(empty($lista)){
+                    return array("sucesso"=>false,
+                    "mensagem"=>ERRO_NENHUM_ANIMAL."Erro:".$conn->error,);
+                }
+        
+                return array("sucesso"=>true,
+                    "data"=>$lista);
+                
+                $conn = null;
+                
+        } catch(PDOException $e) {
+                return array("mensagem" => ERRO_ANIMAL_FILTRO."Erro:".$conn->error.$e->getMessage(),
+                "sucesso" => false);
+        }
+        
+    }
+    
     
     
 }

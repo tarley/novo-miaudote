@@ -24,5 +24,7 @@
     define("ERRO_ANIMAL_ALTERADO", "Erro ao salvar as alterações.");
     
     define("ERRO_ANIMAL_FOTO", "Nenhuma foto encontrada.");
+    
+    define("ERRO_ANIMAL_FILTRO", "Não foi possível executar o filtro.");
 
 ?>

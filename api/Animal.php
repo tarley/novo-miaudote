@@ -89,7 +89,11 @@ if($acao == "ExcluirAnimal") {
 }
 
 if($acao == "AdotarAnimal") {
-    $id = "1";
+    $postdata = file_get_contents("php://input");
+    $animal = json_decode($postdata);
+    $dados = $animal->dados;
+    
+    $id = $dados->id;
     
     echo json_encode($Animal->AdotarAnimal($id));
 }
@@ -173,7 +177,11 @@ if($acao == "BuscarTodos") {
 }
 
 if($acao == "BuscarPorId") {
-    $id = $_GET["id"];
+    $postdata = file_get_contents("php://input");
+    $animal = json_decode($postdata);
+    $dados = $animal->dados;
+    
+    $id = $dados->id;
  
     echo json_encode($Animal->BuscarPorId($id));
 }
@@ -184,7 +192,11 @@ if($acao == "BuscarAdotados") {
 }
 
 if($acao == "BuscarImagens") {
-    $id = $_GET["id"];
+    $postdata = file_get_contents("php://input");
+    $animal = json_decode($postdata);
+    $dados = $animal->dados;
+    
+    $id = $dados->id;
     
     echo json_encode($Animal->BuscarImagens($id));
 }
