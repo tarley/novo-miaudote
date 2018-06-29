@@ -201,4 +201,8 @@ if($acao == "BuscarImagens") {
     echo json_encode($Animal->BuscarImagens($id));
 }
 
+if($acao == "Filtro") {
+    //Implementar busca de parâmetros da tela
+}
+
 ?>
