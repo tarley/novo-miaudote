@@ -79,7 +79,11 @@ if($acao == "CadastrarAnimal") {
 }
 
 if($acao == "ExcluirAnimal") {
-    $id = "2";
+    
+    $postdata = file_get_contents("php://input");
+    $animal = json_decode($postdata);
+    $dados = $animal->dados[0];
+    $id = $dados->COD_ANIMAL;
     
     echo json_encode($Animal->excluirAnimal($id));
 }

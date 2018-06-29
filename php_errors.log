@@ -1100,3 +1100,9 @@ Stack trace:
 [27-Jun-2018 19:19:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
 [27-Jun-2018 19:19:16 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:77
 [27-Jun-2018 19:19:16 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[29-Jun-2018 17:24:48 UTC] PHP Fatal error:  Call to undefined method stdClass::excluirAnimal() in /home/ubuntu/workspace/api/Animal.php on line 88
+[29-Jun-2018 17:24:48 UTC] PHP Stack trace:
+[29-Jun-2018 17:24:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[29-Jun-2018 17:25:49 UTC] PHP Fatal error:  Call to undefined method stdClass::excluirAnimal() in /home/ubuntu/workspace/api/Animal.php on line 88
+[29-Jun-2018 17:25:49 UTC] PHP Stack trace:
+[29-Jun-2018 17:25:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0

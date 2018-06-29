@@ -120,8 +120,7 @@
                                             <div class="input-field col m10.5">
                                                 <select ng-model="animal.instituicao" class="browser-default" name="instituicao">
                                                 <option value="" disabled selected>Informe a Instituição</option>
-                                                <option value="1">ONG Proteger</option>
-                                                <option value="2">João Junior</option>
+                                                <option ng-repeat="x in Instituicoes" value="{{x.COD_INSTITUICAO}}">{{x.NOM_INSTITUICAO}}</option>
                                             </select>
                                             </div>
                                         </div>
