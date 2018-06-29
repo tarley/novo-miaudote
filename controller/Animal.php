@@ -206,6 +206,7 @@ class Animal {
         
         $stmt-> execute();
         
+        $this->UploadImagem($id, $p_foto);
 
             return array("mensagem" => SUCESSO_ANIMAL_ALTERADO,
                         "sucesso" => true);
@@ -418,7 +419,7 @@ class Animal {
         $sucesso=false;
         $mensagem=null;
         
-        $stmt = $conn->prepare("SELECT * FROM FOTO WHERE ANIMAL_COD_ANIMAL = :id");
+        $stmt = $conn->prepare("SELECT COD_FOTO_ANIMAL, IND_FOTO_PRINCIPAL, TIP_FOTO, BIN_FOTO, ANIMAL_COD_ANIMAL FROM FOTO WHERE ANIMAL_COD_ANIMAL = :id");
         
         $stmt->bindParam(':id', $id);
                 
@@ -444,11 +445,16 @@ class Animal {
     public function UploadImagem($id, $imagem) {
         include "Conexao.php";
         
-        
+        $imagens = BuscarImagens($id);
         
         try {
-        $stmt = $conn -> prepare("INSERT INTO `FOTO`(`TIP_FOTO`, `BIN_FOTO`, `IND_FOTO_PRINCIPAL`, `ANIMAL_COD_ANIMAL`) 
+            
+        if($imagens == null) {    
+            $stmt = $conn -> prepare("INSERT INTO `FOTO`(`TIP_FOTO`, `BIN_FOTO`, `IND_FOTO_PRINCIPAL`, `ANIMAL_COD_ANIMAL`) 
                                 VALUES (:tipo, :binario, 'T', :id)");
+        } else {
+            $stmt = $conn -> prepare("UPDATE `FOTO` SET `TIP_FOTO` = :tipo, `BIN_FOTO` = :binario WHERE `ANIMAL_COD_ANIMAL` = :id");
+        }
                                 
         //Pega extensão arquivo
         $tipo = substr($imagem, 11, 3);
