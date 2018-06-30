@@ -202,7 +202,17 @@ if($acao == "BuscarImagens") {
 }
 
 if($acao == "Filtro") {
-    //Implementar busca de parâmetros da tela
+    $postdata = file_get_contents("php://input");
+    $animal = json_decode($postdata);
+    $dados = $animal->dados;
+    
+    $nome = $animal->nome;
+    $especie = $animal->especie;
+    $porte = $animal->porte;
+    $sexo = $animal->sexo;
+    $idade = $animal->idade;
+    
+    echo json_encode ($Animal->filtro($nome, $especie, $porte, $sexo, $idade));
 }
 
 ?>
