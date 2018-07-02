@@ -1106,3 +1106,13 @@ Stack trace:
 [29-Jun-2018 17:25:49 UTC] PHP Fatal error:  Call to undefined method stdClass::excluirAnimal() in /home/ubuntu/workspace/api/Animal.php on line 88
 [29-Jun-2018 17:25:49 UTC] PHP Stack trace:
 [29-Jun-2018 17:25:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[02-Jul-2018 22:12:43 UTC] PHP Fatal error:  Call to undefined function BuscarImagens() in /home/ubuntu/workspace/controller/Animal.php on line 448
+[02-Jul-2018 22:12:43 UTC] PHP Stack trace:
+[02-Jul-2018 22:12:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[02-Jul-2018 22:12:43 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:78
+[02-Jul-2018 22:12:43 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71
+[02-Jul-2018 22:15:43 UTC] PHP Fatal error:  Call to undefined function BuscarImagens() in /home/ubuntu/workspace/controller/Animal.php on line 448
+[02-Jul-2018 22:15:43 UTC] PHP Stack trace:
+[02-Jul-2018 22:15:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[02-Jul-2018 22:15:43 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:78
+[02-Jul-2018 22:15:43 UTC] PHP   3. Animal->UploadImagem() /home/ubuntu/workspace/controller/Animal.php:71

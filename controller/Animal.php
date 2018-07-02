@@ -445,7 +445,7 @@ class Animal {
     public function UploadImagem($id, $imagem) {
         include "Conexao.php";
         
-        $imagens = BuscarImagens($id);
+        //$imagens = BuscarImagens($id);
         
         try {
             
