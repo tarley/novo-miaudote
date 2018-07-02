@@ -144,7 +144,7 @@ CREATE TABLE `INSTITUICAO` (
 --
 -- Extraindo dados da tabela `instituicao`
 --
-
+/*
 INSERT INTO `INSTITUICAO` (`COD_INSTITUICAO`, `NOM_INSTITUICAO`, `NUM_TELEFONE`, `IND_TIPO_INSTITUICAO`, `IND_EXCLUIDO`, `DES_EMAIL`, `CIDADE_COD_CIDADE`) VALUES
 (1, 'Proteger', '3333', 'O', 'S', 'contato@ongproteger.com.br', 1),
 (2, 'Joao Junior', '9999', 'P', 'N', 'joaojunin@gmail.com', 1),
@@ -155,7 +155,7 @@ INSERT INTO `INSTITUICAO` (`COD_INSTITUICAO`, `NOM_INSTITUICAO`, `NUM_TELEFONE`,
 (12, 'fsdf', '(44)4444-4444', 'P', 'N', 'fsdf', 1),
 (13, 'fdfds', '(', 'P', 'S', 'fsdfdf@gmail.com', 1),
 (14, 'fdsdf', '(44)4444-44', 'O', 'N', 'fdsdf', 1);
-
+*/
 -- --------------------------------------------------------
 
 --
@@ -174,7 +174,7 @@ CREATE TABLE `USUARIO` (
 --
 -- Extraindo dados da tabela `usuario`
 --
-
+/*
 INSERT INTO `USUARIO` (`COD_USUARIO`, `DES_SENHA`, `NOM_USUARIO`, `DES_TIPO_USUARIO`, `DES_EMAIL`, `IND_EXCLUIDO`) VALUES
 (1, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Henrique', 'A', 'henrique@gmail.com', 'N'),
 (2, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Nixon', 'C', 'nixonsette@gmail.com', 'S'),
@@ -194,7 +194,7 @@ INSERT INTO `USUARIO` (`COD_USUARIO`, `DES_SENHA`, `NOM_USUARIO`, `DES_TIPO_USUA
 (16, '7b52009b64fd0a2a49e6d8a939753077792b0554', 'ttt', 'C', 'tt@gmail.com', 'S'),
 (17, '51eac6b471a284d3341d8c0c63d0f1a286262a18', 'fdsfdsf@gmail.com', 'C', '456@gmail.com', 'S'),
 (18, '51eac6b471a284d3341d8c0c63d0f1a286262a18', 'fdsdfdf@gmail.com', 'C', '456@gmail.comf', 'S');
-
+*/
 --
 -- Indexes for dumped tables
 --

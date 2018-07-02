@@ -1,7 +1,7 @@
 
 <?php
 
-    define("SUCESSO_ANIMAL_EXCLUID", "Animal excluído com sucesso." );
+    define("SUCESSO_ANIMAL_EXCLUIDO", "Animal excluído com sucesso." );
     define("ERRO_ANIMAL_EXCLUIDO", "Erro na exclusão do animal.");
     
     define("ERRO_NOME_OBRIGATORIO", "O nome do animal deve ser informado.");
