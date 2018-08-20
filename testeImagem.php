@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 /******
  * Upload de imagens
- ******/
+ *******/
  require_once "extensions/thumbnail.inc.php";
  header('Content-Type: text/html; charset=utf-8');
  
