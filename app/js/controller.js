@@ -1,4 +1,7 @@
-var urlApi = 'http://localhost/novo-miaudote/api/';
+//Local
+// var urlApi = 'http://localhost/novo-miaudote/api/';
+//C9.io
+var urlApi = 'api/';
 
 var app = angular.module('miaudote.controller', [])
 
