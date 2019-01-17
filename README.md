@@ -1,3 +1,21 @@
+**Configuração Ambiente**
+
+1- Instalar Node.js
+2- Instalar servidor do front-end: 
+    - $ npm install -g http-server
+3- Instalar servidor do back-end: 
+    - Instalar XAMPP
+4- Clonar repositório
+5- Copiar a pasta do projeto 'novo-miaudote' para o diretório 'htdocs' do XAMPP
+6- Iniciar o XAMPP (Vai subir o back-end)
+7- A partir do diretório do projeto 'novo-miaudote', executar: $ http-server (vai subir o front-end)
+8- Criar o BD
+    - Abrir o PHPMyAdmin
+    - Criar o esquema 'miaudote'
+    - Executar o script do banco.
+9- Adicionar ao navegador alguma extensão que permita 'CORS', pois o front e back-end estão em URLs diferentes.
+
+
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'

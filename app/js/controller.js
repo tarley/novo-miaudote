@@ -1,3 +1,5 @@
+var urlApi = 'http://localhost/novo-miaudote/api/';
+
 var app = angular.module('miaudote.controller', [])
 
     .directive('fileModel', ['$parse', function ($parse) {
@@ -25,7 +27,7 @@ var app = angular.module('miaudote.controller', [])
 
             $.ajax({
                 type: "GET",
-                url: "api/Animal.php?acao=BuscarTodos&retornarImagem=T",
+                url: urlApi + "Animal.php?acao=BuscarTodos&retornarImagem=T",
                 success: function(e) {
                     $scope.listaPets = e.data;
                 }
@@ -228,7 +230,7 @@ var app = angular.module('miaudote.controller', [])
             fd.append('temperamento', $scope.temperamento);
             fd.append('file', file);
             
-               $http.post('api/Animal.php?acao=CadastrarAnimal', fd)
+               $http.post(urlApi + 'Animal.php?acao=CadastrarAnimal', fd)
             
                .success(function(){
                    $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">" + e.mensagem + "</div>");
@@ -242,7 +244,7 @@ var app = angular.module('miaudote.controller', [])
            /*
             $.ajax({
                 type: "POST",
-                url: "api/Animal.php?acao=CadastrarAnimal",
+                url: "Animal.php?acao=CadastrarAnimal",
                 data: "nome=" + nome + "&sexo=" + sexo + "&especie=" + especie + "&castrado=" + castrado + "&idade=" + idade + "&porte=" + porte + "&instituicao=" + instituicao + "&observacao=" + observacao + "&temperamento=" + temperamento,
                 sucess: function(e) {
                     if (e.sucesso) {
@@ -265,7 +267,7 @@ var app = angular.module('miaudote.controller', [])
 
             $.ajax({
                 type: "POST",
-                url: "api/Auth.php?acao=CriarSessao",
+                url: urlApi + "Auth.php?acao=CriarSessao",
                 data: "email=" + email + "&senha=" + senha,
                 success: function(e) {
                     if (e.sucesso) {
